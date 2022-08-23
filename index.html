@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip Path</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #app {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(45, 45, 45);
+      }
+      .wrapper {
+        width: 500px;
+        height: 800px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .wrapper div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .wrapper .a {
+        background-color: rgb(56, 122, 148);
+        clip-path: polygon(56% 5%, 77% 16%, 68% 39%, 56% 37%);
+        animation: a 2s infinite alternate;
+      }
+      @keyframes a {
+        0%,
+        10% {
+          background-color: rgb(56, 122, 148);
+          clip-path: polygon(56% 5%, 77% 16%, 68% 39%, 56% 37%);
+        }
+        /* 20% {
+          clip-path: polygon(86% 5%, 97% 16%, 88% 39%, 76% 37%);
+        }
+        50% {
+          clip-path: polygon(36% 5%, 37% 12%, 38% 20%, 20% 20%);
+        }
+        70% {
+          clip-path: polygon(16% 8%, 17% 7%, 18% 13%, 12% 12%);
+        } */
+        90%,
+        100% {
+          background-color: rgb(199, 129, 63);
+          clip-path: polygon(6% 5%, 7% 5%, 10% 10%, 5% 8%);
+        }
+      }
+      .wrapper .b {
+        background-color: rgb(118, 177, 200);
+        clip-path: polygon(56% 5%, 29% 10%, 28% 41%, 56% 37%);
+        animation: b 2s infinite alternate;
+      }
+      @keyframes b {
+        0%,
+        10% {
+          background-color: rgb(118, 177, 200);
+          clip-path: polygon(56% 5%, 29% 10%, 28% 41%, 56% 37%);
+        }
+        90%,
+        100% {
+          background-color: rgb(250, 5, 5);
+          clip-path: polygon(80% 80%, 82% 81%, 81% 85%, 78% 84%);
+        }
+      }
+      .wrapper .c {
+        background-color: rgb(16, 58, 75);
+        clip-path: polygon(68% 39%, 45% 45%, 28% 41%, 56% 37%);
+        animation: c 2s infinite alternate;
+      }
+      @keyframes c {
+        0%,
+        10% {
+          background-color: rgb(16, 58, 75);
+          clip-path: polygon(68% 39%, 45% 45%, 28% 41%, 56% 37%);
+        }
+        90%,
+        100% {
+          background-color: rgb(47, 64, 75);
+          clip-path: polygon(25% 80%, 30% 76%, 33% 80%, 24% 83%);
+        }
+      }
+      .wrapper .d {
+        background-color: rgb(24, 88, 113);
+        clip-path: polygon(68% 39%, 45% 45%, 59% 58%);
+        animation: d 2s infinite alternate;
+      }
+      @keyframes d {
+        0%,
+        10% {
+          background-color: rgb(24, 88, 113);
+          clip-path: polygon(68% 39%, 45% 45%, 59% 58%);
+        }
+        90%,
+        100% {
+          background-color: rgb(0, 0, 0);
+          clip-path: polygon(48% 55%, 52% 50%, 55% 53%);
+        }
+      }
+      .wrapper .e {
+        background-color: rgb(98, 160, 185);
+        clip-path: polygon(68% 39%, 72% 51%, 59% 58%);
+        animation: e 2s infinite alternate;
+      }
+      @keyframes e {
+        0%,
+        10% {
+          background-color: rgb(98, 160, 185);
+          clip-path: polygon(68% 39%, 72% 51%, 59% 58%);
+        }
+        90%,
+        100% {
+          background-color: rgb(225, 255, 0);
+          clip-path: polygon(78% 55%, 72% 60%, 72% 40%);
+        }
+      }
+      .wrapper .f {
+        background-color: rgb(191, 222, 234);
+        clip-path: polygon(72% 51%, 85% 52%, 79% 65%, 59% 58%);
+        animation: f 2s infinite alternate;
+      }
+      @keyframes f {
+        0%,
+        10% {
+          background-color: rgb(191, 222, 234);
+          clip-path: polygon(72% 51%, 85% 52%, 79% 65%, 59% 58%);
+        }
+        90%,
+        100% {
+          background-color: transparent;
+          clip-path: polygon(32% 10%, 40% 20%, 38% 18%, 31% 15%);
+        }
+      }
+      .wrapper .g {
+        background-color: rgb(135, 195, 219);
+        clip-path: polygon(79% 65%, 85% 52%, 90% 66%);
+        animation: g 2s infinite alternate;
+      }
+      @keyframes g {
+        0%,
+        10% {
+          background-color: rgb(135, 195, 219);
+          clip-path: polygon(79% 65%, 85% 52%, 90% 66%);
+        }
+        90%,
+        100% {
+          background-color: rgb(225, 93, 166);
+          clip-path: polygon(79% 50%, 85% 72%, 74% 66%);
+        }
+      }
+      .wrapper .h {
+        background-color: rgb(65, 103, 118);
+        clip-path: polygon(79% 65%, 90% 66%, 85% 71%, 75% 71%);
+        animation: h 2s infinite alternate;
+      }
+      @keyframes h {
+        0%,
+        10% {
+          background-color: rgb(65, 103, 118);
+          clip-path: polygon(79% 65%, 90% 66%, 85% 71%, 75% 71%);
+        }
+        90%,
+        100% {
+          background-color: rgb(98, 229, 86);
+          clip-path: polygon(37% 65%, 50% 66%, 58% 71%, 35% 51%);
+        }
+      }
+      .wrapper .i {
+        background-color: rgb(91, 141, 161);
+        clip-path: polygon(75% 71%, 35% 69%, 33% 63%, 59% 58%, 79% 65%);
+        animation: i 2s infinite alternate;
+      }
+      @keyframes i {
+        0%,
+        10% {
+          background-color: rgb(91, 141, 161);
+          clip-path: polygon(75% 71%, 35% 69%, 33% 63%, 59% 58%, 79% 65%);
+        }
+        90%,
+        100% {
+          background-color: rgb(233, 207, 181);
+          clip-path: polygon(65% 71%, 25% 69%, 33% 63%, 49% 58%, 59% 65%);
+        }
+      }
+      .wrapper .j {
+        background-color: rgb(191, 222, 234);
+        clip-path: polygon(33% 63%, 45% 45%, 59% 58%);
+        animation: j 2s infinite alternate;
+      }
+      @keyframes j {
+        0%,
+        10% {
+          background-color: rgb(191, 222, 234);
+          clip-path: polygon(33% 63%, 45% 45%, 59% 58%);
+        }
+        90%,
+        100% {
+          background-color: rgb(255, 29, 29);
+          clip-path: polygon(33% 53%, 45% 52%, 59% 58%);
+        }
+      }
+      .wrapper .k {
+        background-color: rgb(85, 152, 178);
+        clip-path: polygon(45% 45%, 33% 63%, 28% 50%);
+        animation: k 2s infinite alternate;
+      }
+      @keyframes k {
+        0%,
+        10% {
+          background-color: rgb(85, 152, 178);
+          clip-path: polygon(45% 45%, 33% 63%, 28% 50%);
+        }
+        90%,
+        100% {
+          background-color: rgb(169, 4, 106);
+          clip-path: polygon(5% 85%, 13% 73%, 28% 80%);
+        }
+      }
+      .wrapper .l {
+        background-color: rgb(44, 88, 110);
+        clip-path: polygon(32% 22%, 52% 18%, 38% 23%);
+        animation: l 2s infinite alternate;
+      }
+      @keyframes l {
+        0%,
+        10% {
+          background-color: rgb(44, 88, 110);
+          clip-path: polygon(32% 22%, 52% 18%, 38% 23%);
+        }
+        90%,
+        100% {
+          background-color: rgb(162, 227, 210);
+          clip-path: polygon(42% 22%, 52% 18%, 38% 23%);
+        }
+      }
+      .wrapper .m {
+        background-color: rgb(44, 88, 110);
+        clip-path: polygon(38% 22%, 40% 22%, 39% 28%, 37% 28%);
+        animation: m 2s infinite alternate;
+      }
+      @keyframes m {
+        0%,
+        10% {
+          background-color: rgb(44, 88, 110);
+          clip-path: polygon(38% 22%, 40% 22%, 39% 28%, 37% 28%);
+        }
+        90%,
+        100% {
+          background-color: rgb(197, 134, 229);
+          clip-path: polygon(8% 22%, 10% 22%, 10% 28%, 1% 28%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="wrapper">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+        <div class="g"></div>
+        <div class="h"></div>
+        <div class="i"></div>
+        <div class="j"></div>
+        <div class="k"></div>
+        <div class="l"></div>
+        <div class="m"></div>
+      </div>
+    </div>
+  </body>
+</html>
